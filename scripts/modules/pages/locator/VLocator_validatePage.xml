@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scriptmodule xmlns="http://xlt.xceptance.com/xlt-script/2" version="6">
+  <codecomment>Validate main content</codecomment>
+  <command name="assertText" target="css=#primary h1" value="Find a Store Near You"/>
+  <command name="assertElementPresent" target="id=dwfrm_storelocator_postalCode"/>
+  <command name="assertElementPresent" target="id=dwfrm_storelocator_maxdistance"/>
+  <command name="assertElementPresent" target="id=dwfrm_storelocator_address_states_stateUSCA"/>
+  <command name="assertElementPresent" target="id=dwfrm_storelocator_address_country"/>
+</scriptmodule>

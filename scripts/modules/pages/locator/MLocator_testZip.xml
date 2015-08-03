@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scriptmodule xmlns="http://xlt.xceptance.com/xlt-script/2" version="6">
+  <module name="modules.pages.locator.MLocator_enterZipCode">
+    <parameter name="zipCode" value="@{zipCode}"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_selectMaxDistance">
+    <parameter name="maxDistance" value="@{maxDistance}"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByZip"/>
+  <module name="modules.pages.locator.searchresults.VLocator_validateNumberOfResults">
+    <parameter name="resultsText" value="@{resultsText}"/>
+  </module>
+  <module name="modules.pages.locator.searchresults.MLocator_clickBackToStoreLocator"/>
+</scriptmodule>

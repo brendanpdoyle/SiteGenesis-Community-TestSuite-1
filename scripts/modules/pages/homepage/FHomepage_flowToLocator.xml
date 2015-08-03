@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scriptmodule xmlns="http://xlt.xceptance.com/xlt-script/2" version="6">
+  <codecomment>#Setup 
+
+- Start on homepage
+- Go Store Locator</codecomment>
+  <command name="clickAndWait" target="//*[@id='navigation']//i[contains(@class,'fa') and contains(@class,'fa-map-marker')][1]"/>
+</scriptmodule>

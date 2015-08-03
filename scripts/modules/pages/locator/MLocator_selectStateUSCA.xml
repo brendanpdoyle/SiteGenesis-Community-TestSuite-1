@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scriptmodule xmlns="http://xlt.xceptance.com/xlt-script/2" version="6">
+  <parameter name="state" desc="Hold the name of the given state that will be selected"/>
+  <command name="select" target="id=dwfrm_storelocator_address_states_stateUSCA" value="label=@{state}"/>
+</scriptmodule>

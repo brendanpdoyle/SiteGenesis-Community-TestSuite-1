@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scriptmodule xmlns="http://xlt.xceptance.com/xlt-script/2" version="6">
+  <command name="assertText" target="//*[@id='dwfrm_storelocator']//div[contains(@class,'form-caption') and contains(@class,'error-message')][1]" value="The format of the zip is invalid."/>
+</scriptmodule>

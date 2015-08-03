@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scriptmodule xmlns="http://xlt.xceptance.com/xlt-script/2" version="6">
+  <parameter name="country" desc="Hold the name of the country that will be selected"/>
+  <command name="select" target="id=dwfrm_storelocator_address_country" value="label=@{country}"/>
+  <module name="modules.pages.locator.MLocator_clickSearchByCountry"/>
+</scriptmodule>

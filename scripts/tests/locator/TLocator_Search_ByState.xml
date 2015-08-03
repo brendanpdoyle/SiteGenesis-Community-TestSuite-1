@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase xmlns="http://xlt.xceptance.com/xlt-script/2" version="6">
+  <codecomment>#Setup
+
+- Move to Store Locator page 
+- Validate page to ensure proper elements are there</codecomment>
+  <module name="modules.helper.FHelper_Session_flowToStartSession"/>
+  <module name="modules.pages.homepage.FHomepage_flowToLocator"/>
+  <module name="modules.pages.locator.VLocator_validatePage"/>
+  <codecomment>Test for invalid input</codecomment>
+  <module name="modules.pages.locator.MLocator_selectStateUSCA">
+    <parameter name="state" value="Select..."/>
+  </module>
+  <command name="click" target="document.forms[3].dwfrm_storelocator_findbystate"/>
+  <module name="modules.pages.locator.VLocator_validateRequiredStateMessage"/>
+  <codecomment>Test for valid input</codecomment>
+  <module name="modules.pages.locator.MLocator_selectStateUSCA">
+    <parameter name="state" value="Non-US/Other"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByState"/>
+  <module name="modules.pages.locator.VLocator_validateNoResults"/>
+  <module name="modules.pages.locator.MLocator_selectStateUSCA">
+    <parameter name="state" value="Newfoundland and Labrador"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByState"/>
+  <module name="modules.pages.locator.VLocator_validateNoResults"/>
+  <module name="modules.pages.locator.MLocator_selectStateUSCA">
+    <parameter name="state" value="Armed Forces Africa"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByState"/>
+  <module name="modules.pages.locator.VLocator_validateNoResults"/>
+  <module name="modules.pages.locator.MLocator_selectStateUSCA">
+    <parameter name="state" value="Arizona"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByState"/>
+  <module name="modules.pages.locator.VLocator_validateNoResults"/>
+  <module name="modules.pages.locator.MLocator_selectStateUSCA">
+    <parameter name="state" value="Rhode Island"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByState"/>
+  <module name="modules.pages.locator.searchresults.VLocator_validateNumberOfResults">
+    <parameter name="resultsText" value="Your search found 1 stores"/>
+  </module>
+  <module name="modules.pages.locator.searchresults.MLocator_clickBackToStoreLocator"/>
+</testcase>

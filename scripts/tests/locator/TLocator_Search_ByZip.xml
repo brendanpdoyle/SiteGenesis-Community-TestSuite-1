@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase xmlns="http://xlt.xceptance.com/xlt-script/2" version="6">
+  <codecomment>#Setup
+
+- Move to Store Locator page 
+- Validate page to ensure proper elements are there</codecomment>
+  <module name="modules.helper.FHelper_Session_flowToStartSession"/>
+  <module name="modules.pages.homepage.FHomepage_flowToLocator"/>
+  <module name="modules.pages.locator.VLocator_validatePage"/>
+  <codecomment>#Test
+
+- Test Zip Code Field for proper input
+- Test for correct result based on Zip Code and Radius</codecomment>
+  <module name="modules.pages.locator.MLocator_enterZipCode">
+    <parameter name="zipCode" value="00000"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_selectMaxDistance">
+    <parameter name="maxDistance" value="15 Miles"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByZip"/>
+  <module name="modules.pages.locator.VLocator_validateNoResults"/>
+  <module name="modules.pages.locator.MLocator_enterZipCode">
+    <parameter name="zipCode" value="3"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_selectMaxDistance">
+    <parameter name="maxDistance" value="300 Miles"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByZip"/>
+  <module name="modules.pages.locator.VLocator_validateInvalidZip"/>
+  <module name="modules.pages.locator.MLocator_enterZipCode">
+    <parameter name="zipCode" value="888888"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_selectMaxDistance">
+    <parameter name="maxDistance" value="USA"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByZip"/>
+  <module name="modules.pages.locator.VLocator_validateInvalidZip"/>
+  <module name="modules.pages.locator.MLocator_enterZipCode">
+    <parameter name="zipCode" value="apples"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_selectMaxDistance">
+    <parameter name="maxDistance" value="100 Miles"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByZip"/>
+  <module name="modules.pages.locator.VLocator_validateInvalidZip"/>
+  <module name="modules.pages.locator.MLocator_enterZipCode">
+    <parameter name="zipCode" value=""/>
+  </module>
+  <module name="modules.pages.locator.MLocator_selectMaxDistance">
+    <parameter name="maxDistance" value="15 Miles"/>
+  </module>
+  <command name="click" target="document.forms[2].dwfrm_storelocator_findbyzip"/>
+  <module name="modules.pages.locator.VLocator_validateRequiredZipMessage"/>
+  <module name="modules.pages.locator.MLocator_enterZipCode">
+    <parameter name="zipCode" value="02120"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_selectMaxDistance">
+    <parameter name="maxDistance" value="15 Miles"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByZip"/>
+  <module name="modules.pages.locator.searchresults.VLocator_validateNumberOfResults">
+    <parameter name="resultsText" value="Your search found 4 stores"/>
+  </module>
+  <module name="modules.pages.locator.searchresults.MLocator_clickBackToStoreLocator"/>
+  <module name="modules.pages.locator.MLocator_enterZipCode">
+    <parameter name="zipCode" value="02120"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_selectMaxDistance">
+    <parameter name="maxDistance" value="30 Miles"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByZip"/>
+  <module name="modules.pages.locator.searchresults.VLocator_validateNumberOfResults">
+    <parameter name="resultsText" value="Your search found 5 stores"/>
+  </module>
+  <module name="modules.pages.locator.searchresults.MLocator_clickBackToStoreLocator"/>
+  <module name="modules.pages.locator.MLocator_enterZipCode">
+    <parameter name="zipCode" value="02120"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_selectMaxDistance">
+    <parameter name="maxDistance" value="100 Miles"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByZip"/>
+  <module name="modules.pages.locator.searchresults.VLocator_validateNumberOfResults">
+    <parameter name="resultsText" value="Your search found 8 stores"/>
+  </module>
+  <module name="modules.pages.locator.searchresults.MLocator_clickBackToStoreLocator"/>
+  <module name="modules.pages.locator.MLocator_enterZipCode">
+    <parameter name="zipCode" value="02120"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_selectMaxDistance">
+    <parameter name="maxDistance" value="300 Miles"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByZip"/>
+  <module name="modules.pages.locator.searchresults.VLocator_validateNumberOfResults">
+    <parameter name="resultsText" value="Your search found 10 stores"/>
+  </module>
+  <module name="modules.pages.locator.searchresults.MLocator_clickBackToStoreLocator"/>
+  <module name="modules.pages.locator.MLocator_enterZipCode">
+    <parameter name="zipCode" value="02120"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_selectMaxDistance">
+    <parameter name="maxDistance" value="USA"/>
+  </module>
+  <module name="modules.pages.locator.MLocator_clickSearchByZip"/>
+  <module name="modules.pages.locator.searchresults.VLocator_validateNumberOfResults">
+    <parameter name="resultsText" value="Your search found 12 stores"/>
+  </module>
+  <module name="modules.pages.locator.searchresults.MLocator_clickBackToStoreLocator"/>
+</testcase>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase xmlns="http://xlt.xceptance.com/xlt-script/2" version="6">
+  <module name="modules.helper.FHelper_Session_flowToStartSession"/>
+  <module name="modules.pages.homepage.FHomepage_flowToLocator"/>
+  <module name="modules.pages.locator.MLocator_selectCountry">
+    <parameter name="country" value="United States"/>
+  </module>
+  <module name="modules.pages.locator.searchresults.VLocator_validateCountryUSA"/>
+  <module name="modules.pages.locator.MLocator_selectCountry">
+    <parameter name="country" value="Canada"/>
+  </module>
+  <module name="modules.pages.locator.VLocator_validateNoResults"/>
+  <module name="modules.pages.locator.MLocator_selectCountry">
+    <parameter name="country" value="Germany"/>
+  </module>
+  <module name="modules.pages.locator.searchresults.VLocator_validateCountryGermany"/>
+</testcase>
